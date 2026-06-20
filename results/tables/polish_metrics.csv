@@ -1,0 +1,11 @@
+run_id,method,rounds,input_assembly,output_assembly,wall_sec
+ont_r9_10x_flye_orig_s13,medaka,1,assemblies/ont_r9_10x_flye_orig_s13/assembly.fasta,polished/ont_r9_10x_flye_orig_s13/medaka_r1/consensus.fasta,17.3
+ont_r9_20x_flye_orig_s13,medaka,1,assemblies/ont_r9_20x_flye_orig_s13/assembly.fasta,polished/ont_r9_20x_flye_orig_s13/medaka_r1/consensus.fasta,18.82
+ont_r9_30x_flye_orig_s13,medaka,1,assemblies/ont_r9_30x_flye_orig_s13/assembly.fasta,polished/ont_r9_30x_flye_orig_s13/medaka_r1/consensus.fasta,21.08
+ont_r9_50x_flye_orig_s13,medaka,1,assemblies/ont_r9_50x_flye_orig_s13/assembly.fasta,polished/ont_r9_50x_flye_orig_s13/medaka_r1/consensus.fasta,26.51
+ont_r9_5x_flye_orig_s13,medaka,1,assemblies/ont_r9_5x_flye_orig_s13/assembly.fasta,polished/ont_r9_5x_flye_orig_s13/medaka_r1/consensus.fasta,17.89
+ont_r10_10x_flye_orig_s13,medaka,1,assemblies/ont_r10_10x_flye_orig_s13/assembly.fasta,polished/ont_r10_10x_flye_orig_s13/medaka_r1/consensus.fasta,17.59
+ont_r10_20x_flye_orig_s13,medaka,1,assemblies/ont_r10_20x_flye_orig_s13/assembly.fasta,polished/ont_r10_20x_flye_orig_s13/medaka_r1/consensus.fasta,17.23
+ont_r10_30x_flye_orig_s13,medaka,1,assemblies/ont_r10_30x_flye_orig_s13/assembly.fasta,polished/ont_r10_30x_flye_orig_s13/medaka_r1/consensus.fasta,18.86
+ont_r10_50x_flye_orig_s13,medaka,1,assemblies/ont_r10_50x_flye_orig_s13/assembly.fasta,polished/ont_r10_50x_flye_orig_s13/medaka_r1/consensus.fasta,22.72
+ont_r10_5x_flye_orig_s13,medaka,1,assemblies/ont_r10_5x_flye_orig_s13/assembly.fasta,polished/ont_r10_5x_flye_orig_s13/medaka_r1/consensus.fasta,20.54

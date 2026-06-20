@@ -1,0 +1,51 @@
+import yaml
+
+from scripts.benchmark_common import expand_matrix, make_run_id
+
+
+configfile: "config/matrix.yaml"
+
+with open("config/seeds.yaml") as handle:
+    seed_cfg = yaml.safe_load(handle)
+
+RUNS = expand_matrix(config, seed_cfg["default_seed"], seed_cfg["seeds"])
+RUN_IDS = [make_run_id(**row) for row in RUNS]
+
+
+rule all:
+    input:
+        "results/tables/assembly_metrics.csv",
+        "results/figures/n50_comparison.png",
+        "results/figures/pareto_quality_cost.png",
+
+
+rule reference_variants:
+    input:
+        "data/reference/ecoli.fasta"
+    output:
+        "data/reference/ecoli_rep_v1.fasta",
+        "data/reference/ecoli_rep_v2.fasta",
+        "data/reference/ecoli_plasmid.fasta"
+    shell:
+        "python scripts/build_reference_variants.py"
+
+
+rule part_c_sample:
+    input:
+        "quast_reports/all_assemblies/report.tsv"
+    output:
+        "results/tables/assembly_metrics.csv",
+        "results/figures/n50_comparison.png"
+    shell:
+        "python scripts/run_part_c.py --skip-quast"
+
+
+rule analysis_figures:
+    input:
+        metrics="results/tables/assembly_metrics.csv",
+        costs="config/cost_model.csv"
+    output:
+        "results/figures/pareto_quality_cost.png"
+    shell:
+        "python scripts/analyze_benchmark.py {input.metrics} --cost-model {input.costs}"
+

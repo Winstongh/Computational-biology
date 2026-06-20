@@ -1,0 +1,6 @@
+run_id,budget_usd,genome_fraction_pct,n50,est_cost_usd
+ont_r10_20x_flye_orig_s13,1,100.0,4641650,0.92
+ont_r10_20x_flye_orig_s13,2,100.0,4641650,0.92
+ont_r10_20x_flye_orig_s13,5,100.0,4641650,0.92
+ont_r10_20x_flye_orig_s13,10,100.0,4641650,0.92
+ont_r10_20x_flye_orig_s13,20,100.0,4641650,0.92

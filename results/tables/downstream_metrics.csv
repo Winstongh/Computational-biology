@@ -1,0 +1,7 @@
+run_id,tech,coverage,contigs,CDS,rRNA,tRNA
+hifi_30x_hifiasm_orig_s13,hifi,30,1,4302,22,88
+reference_truth,reference_truth,NA,1,4305,22,88
+ont_r10_30x_flye_orig_s13,ont_r10,30,2,4310,22,88
+illumina_30x_spades_orig_s13,illumina,30,139,4235,14,83
+hybrid_30x_unicycler_orig_s13,hybrid,30,1,4305,22,88
+ont_r9_30x_flye_orig_s13,ont_r9,30,2,5627,22,87

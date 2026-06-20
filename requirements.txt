@@ -1,0 +1,14 @@
+# Python dependencies for multi-gen-sequencing-benchmark
+# Install into your conda environment:
+#   pip install -r requirements.txt
+#
+# External tool (not pip-installable on all platforms):
+#   badread >= 0.4.2  — long-read simulator for Nanopore and PacBio HiFi
+#   Install via:  conda install -c bioconda badread
+#                 or: pip install badread
+
+numpy>=1.24
+scipy>=1.10
+pandas>=1.5
+matplotlib>=3.9
+seaborn>=0.13

@@ -1,0 +1,74 @@
+# Large generated sequencing inputs
+data/reads/
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+
+# Large generated assembly/evaluation outputs
+assemblies/
+quast_reports/
+polished/
+downstream/
+busco_downloads/
+results/figures/*.gfa
+
+# Bioinformatics intermediate/index files
+*.aln
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+*.paf
+*.hdf
+*.h5
+*.mmi
+*.fai
+*.dict
+*.meryl/
+*.vcf.gz
+*.vcf.gz.tbi
+
+# Local environments and tool caches
+.conda/
+.mamba/
+.micromamba/
+.snakemake/
+.codegraph/
+.cache/
+.matplotlib/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Local helper binaries downloaded for this machine
+bin/
+
+# Runtime logs
+logs/*.log
+*.log
+
+# Temporary and editor files
+tmp/
+temp/
+raven.cereal
+*.tmp
+*.temp
+*_tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz

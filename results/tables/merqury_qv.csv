@@ -1,0 +1,2 @@
+run_id,tech,merqury_qv,note
+ALL,ALL,NA,simulated reads give degenerate k-mer spectrum; merqury QV step fails (same root cause as polishing finding)

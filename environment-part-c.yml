@@ -1,0 +1,10 @@
+name: multi-gen-part-c
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - quast=5.3.0
+  - matplotlib-base=3.9
+  - pillow
+  - pytest

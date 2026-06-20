@@ -1,0 +1,8 @@
+tech,usd_per_gb,notes
+illumina,15,Short-read outsourced library/sequencing ballpark
+ont_r9,8,Oxford Nanopore R9-like low-cost long reads ballpark
+ont_r10,10,Oxford Nanopore R10-like long reads ballpark
+hifi,25,PacBio HiFi high-accuracy long reads ballpark
+hybrid,23,Illumina plus ONT blended placeholder
+nanopore,10,Alias used by legacy Part C rows
+

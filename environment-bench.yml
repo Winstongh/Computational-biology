@@ -1,0 +1,28 @@
+name: multi-gen-bench
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - art
+  - badread
+  - spades
+  - flye
+  - raven-assembler
+  - miniasm
+  - minimap2
+  - hifiasm
+  - unicycler
+  - quast=5.3.0
+  - busco
+  - merqury
+  - prokka
+  - bandage
+  - racon
+  - snakemake-minimal
+  - pandas
+  - matplotlib-base=3.9
+  - seaborn
+  - pytest
+  - pyyaml
+

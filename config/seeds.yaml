@@ -1,0 +1,4 @@
+# Multi-seed subset runs use all seeds; ordinary matrix rows use default_seed.
+seeds: [13, 17, 19]
+default_seed: 13
+

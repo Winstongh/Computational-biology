@@ -1,0 +1,2 @@
+run_id,tech,generation,coverage,assembler,reference,seed,n50,contigs,largest_contig,total_length,genome_fraction_pct,mismatches_per_100_kbp,indels_per_100_kbp,misassemblies,busco_complete_pct,merqury_qv,ram_mb,wall_sec,estimated_cost_usd
+ont_r10_20x_flye_orig_s13,ont_r10,ont_r10,20,flye,orig,13,4641650,1,4641650,4641650,100.0,0.0,0.0,0,,,,,0.92

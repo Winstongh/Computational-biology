@@ -1,0 +1,4 @@
+metric_pair,spearman
+busco_vs_genome_fraction,0.48
+busco_vs_n50,0.571
+top10_overlap,3/10

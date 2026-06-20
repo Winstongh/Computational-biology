@@ -1,0 +1,11 @@
+name: multi-gen-gpu
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - medaka
+  - clair3
+  - minimap2
+  - samtools
+

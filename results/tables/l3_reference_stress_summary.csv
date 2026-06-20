@@ -1,0 +1,10 @@
+run_id,reference,tech,assembler,coverage,n50,contigs,largest_contig,total_length,genome_fraction_pct,mismatches_per_100_kbp,indels_per_100_kbp,misassemblies
+hifi_30x_hifiasm_plasmid_s13,plasmid,hifi,hifiasm,30,4641665,2,4641665,4691676,100.0,0.0,0.0,0
+hifi_30x_hifiasm_rep_v1_s13,rep_v1,hifi,hifiasm,30,4656685,2,4656685,4684402,100.0,0.0,0.0,0
+hifi_30x_hifiasm_rep_v2_s13,rep_v2,hifi,hifiasm,30,4259389,3,4259389,4716723,100.0,0.0,0.0,1
+illumina_30x_spades_plasmid_s13,plasmid,illumina,spades,30,133044,83,327173,4614267,98.331,1.02,0.15,0
+illumina_30x_spades_rep_v1_s13,rep_v1,illumina,spades,30,117644,87,327173,4565600,98.03,1.12,0.22,0
+illumina_30x_spades_rep_v2_s13,rep_v2,illumina,spades,30,132608,91,311725,4568607,98.028,0.7,0.13,3
+ont_r10_30x_flye_plasmid_s13,plasmid,ont_r10,flye,30,4641666,2,4641666,4691665,100.0,0.0,0.0,0
+ont_r10_30x_flye_rep_v1_s13,rep_v1,ont_r10,flye,30,3651667,2,3651667,4651669,99.893,0.0,0.0,0
+ont_r10_30x_flye_rep_v2_s13,rep_v2,ont_r10,flye,30,4659660,1,4659660,4659660,100.0,0.0,0.0,0

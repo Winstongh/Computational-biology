@@ -1,0 +1,48 @@
+reference:
+  orig: data/reference/ecoli.fasta
+  rep_v1: data/reference/ecoli_rep_v1.fasta
+  rep_v2: data/reference/ecoli_rep_v2.fasta
+  plasmid: data/reference/ecoli_plasmid.fasta
+
+technologies:
+  illumina:
+    kind: short
+    generation: illumina
+    identity: null
+  ont_r9:
+    kind: long
+    generation: ont_r9
+    identity: "87,90,3"
+  ont_r10:
+    kind: long
+    generation: ont_r10
+    identity: "99,99.9,2"
+  hifi:
+    kind: long
+    generation: hifi
+    identity: "99.9,99.99,0.5"
+
+coverages: [5, 10, 20, 30, 50]
+
+assemblers:
+  illumina: [spades]
+  ont_r9: [flye, raven, miniasm]
+  ont_r10: [flye, raven, miniasm]
+  hifi: [hifiasm, flye]
+  hybrid: [unicycler]
+
+layers:
+  L1_main:
+    reference: orig
+    coverages: [5, 10, 20, 30, 50]
+  L3_repeat:
+    reference: [rep_v1, rep_v2]
+    coverages: [30]
+  L3_plasmid:
+    reference: plasmid
+    coverages: [30]
+
+multi_seed_subset:
+  - {tech: ont_r10, coverage: 30, assembler: flye, reference: orig}
+  - {tech: hifi, coverage: 30, assembler: hifiasm, reference: orig}
+  - {tech: illumina, coverage: 30, assembler: spades, reference: orig}
