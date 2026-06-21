@@ -59,8 +59,8 @@ Run the complete Part C workflow:
 bash run_part_c.sh
 ```
 
-The current full benchmark path is documented in `docs/执行手册-逐步命令.md` and
-`docs/修复执行计划.md`. The Part C runner still supports the compact legacy
+The current full benchmark path is documented in `docs/执行手册-逐步命令.md`, with
+results and findings written up in `docs/report.md` and `paper/main.tex`. The Part C runner still supports the compact legacy
 workflow: it finds the assembly filenames currently used in this repository,
 validates each FASTA, runs QUAST against `data/reference/ecoli.fasta`, and
 writes:
