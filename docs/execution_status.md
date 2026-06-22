@@ -37,11 +37,12 @@ GPU 在宿主机可用：非沙箱 `nvidia-smi` 已确认 RTX 4090、Driver 580.
   - plasmid：Illumina + SPAdes、ONT R10 + Flye、HiFi + hifiasm。
 - 已重新生成核心图、覆盖度曲线、Pareto 图和读长分布图。
 - 推荐器已运行，当前推荐 `ont_r10_20x_flye_orig_s13`。
-- 已导出组装图 GFA：
+- 已导出并渲染组装图，PNG/GFA 结果位于 `results/figures/`：
   - `results/figures/graph_ont_r10_30x_flye_orig_s13.gfa`
   - `results/figures/graph_ont_r10_30x_flye_rep_v1_s13.gfa`
   - `results/figures/graph_ont_r10_30x_flye_rep_v2_s13.gfa`
   - `results/figures/graph_ont_r10_30x_flye_plasmid_s13.gfa`
+  - `results/figures/graph_*.png`
 
 ## 新增 L3 结果
 
@@ -88,11 +89,11 @@ conda 23.1.0 classic solver 解不动 → 改用 **micromamba 2.8.1**（`./bin/m
 
 ## 仍未做 / 降级
 
-- Bandage 未安装，组装图只导出 GFA，未渲染 PNG（可 `pip install` 独立版补）。
-- Illumina SPAdes 目录未找到脚本识别的 GFA，图导出以 ONT Flye 为主。
+- 组装图 PNG 已生成；原始 GFA 也保留在 `results/figures/`，不再作为阻塞项。
 - ONT R9 + miniasm 的 5 条 QUAST 缺 alignment 质量列（这些组装无法有效比对参考，属真实结果，非脚本跳过）。
-- Merqury QV：环境已就绪，尚未批量跑（可选，BUSCO 已覆盖"无参完整度"维度）。
-- 下游 Prokka/Clair3（创新 6）、P2 加分（9/10/11）未做。
+- Merqury QV：已记录为 NA/失败原因，模拟 reads 的 k-mer 频谱退化导致该指标不适合批量纳入；`assembly_metrics.csv` 的 `merqury_qv` 列保持为空，`results/tables/merqury_qv.csv` 给出说明。
+- 下游 Prokka 基因恢复已完成（`results/tables/downstream_metrics.csv`，6 条代表性样本）；Clair3 变异检测未做。
+- P2 加分项未系统补齐（如更完整的脏数据压力测试/交互式推荐器/无参审计扩展）；当前已有 `reference_free_audit.csv` 作为部分支撑。
 
 ## 当前关键结论
 
@@ -104,7 +105,6 @@ conda 23.1.0 classic solver 解不动 → 改用 **micromamba 2.8.1**（`./bin/m
 ## 剩余建议
 
 1. ~~Medaka/BUSCO 用 micromamba 建环境~~ → **已完成**（BUSCO 全量 + GPU 抛光均已跑出）。
-2. Bandage 可用 `pip install bandage` 或独立二进制补齐 PNG 渲染；并补 SPAdes 的 `assembly_graph.gfa` 路径。
-3. `Snakemake` 仍未串测，后续可只做 `snakemake -n` dry-run 证明端到端 DAG。
-4. （可选）下游 Prokka 基因恢复 + Clair3 变异检测（创新 6）；Merqury QV 批量；P2 加分。
-5. 写作：把"关键结果发现"四条 + 抛光的诚实结论（模拟基准局限）填进 `report.md` / PPT。
+2. `Snakemake` 仍未串测，后续可只做 `snakemake -n` dry-run 证明端到端 DAG。
+3. （可选）如要继续加分，可补 Clair3 变异检测、真实 reads 下的 Merqury QV、交互式推荐器和更完整的脏数据压力测试。
+4. 写作：把"关键结果发现"四条 + 抛光的诚实结论（模拟基准局限）填进 `report.md` / PPT。
